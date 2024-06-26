@@ -49,7 +49,7 @@ jobs:
         uses: actions/upload-artifact@v3
         if: ${{ !failure() && steps.build.conclusion != 'failure' }}
         with:
-          name: danser
+          name: danser-windows
           path: dist/artifacts/*
 
   build_linux:
@@ -87,7 +87,7 @@ jobs:
         uses: actions/upload-artifact@v3
         if: ${{ !failure() && steps.build.conclusion != 'failure' }}
         with:
-          name: danser
+          name: danser-linux
           path: dist/artifacts/*
 
   publish_release:
